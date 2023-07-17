@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.services__text h1{
+     font-family: 'Archivo Black', 'sans-serif';
+}
+.text-stroke{
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+  }
+  
+body{
+    @apply bg-dark
+}
+p,h1,h2,h3,h4,h5,h6,span,a{
+    @apply text-light;
+}
+.container{
+    @apply px-[2rem] lg:px-[15rem] min-w-[99vw] max-w-[100vw]
+}
+@layer components {
+    .header{
+        @apply bg-black h-[6rem] flex items-center
+    }
+    .header__wrapper{
+        @apply flex justify-between items-center
+    }
+    .branding img{
+        @apply h-[3rem] 
+    }
+    .header__nav{
+        @apply hidden lg:flex
+    }
+    .header__nav ul{
+        @apply flex gap-[2rem]
+    }
+    .header__nav ul li a{
+        @apply uppercase
+    }
+    .toggle__menu{
+        @apply lg:hidden;
+    }
+    .toggle__menu span{
+        @apply block bg-white h-[3px] w-[1.5rem];
+    }
+    .toggle__menu span:nth-child(2){
+        @apply my-1;
+    }
+    .toggle__menu.open span:first-child{
+        @apply rotate-[45deg] translate-y-[.29rem];
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all;
+    }
+    .toggle__menu.open span:last-child{
+        @apply rotate-[-45deg] -translate-y-[.6rem];
+    }
+
+    /* BANNER */
+    .banner{
+        @apply relative py-[2rem] lg:py-[8rem] mb-[5rem]
+    }
+    .banner__wrapper{
+        @apply flex flex-wrap-reverse  justify-center  lg:justify-between
+    }
+    .banner__text{
+        @apply justify-center text-center lg:text-start
+    }
+    .banner__name{
+        @apply py-[2rem]
+    }
+    .banner__name h3{
+        @apply text-[1.4rem] text-primary font-bold uppercase
+    }
+    .banner__name p{
+        @apply text-gray text-[1.3rem]
+    }
+    .banner__info {
+        @apply flex justify-center text-center text-[2rem] lg:text-[3.3rem] relative
+        lg:text-start 
+    }
+    .banner__info h4{
+        @apply mb-[2rem] w-[27rem] lg:w-[50rem]
+    }
+    .banner__info span{
+        @apply absolute bottom-0 lg:left-0 mt-[1rem] h-[.3rem] w-[8rem] lg:w-[5rem] bg-primary 
+    }
+    .banner__links{
+        @apply my-[4rem] flex justify-center lg:justify-start
+    }
+    .banner__links ul{
+        @apply flex gap-[2rem]
+    }
+    .banner__links ul li a i{
+        @apply text-primary text-[2.2rem]
+    }
+    .chevron__down{
+        @apply hidden lg:block
+    }
+    .chevron__down span a {
+        @apply absolute bottom-[2rem] left-[50%] mt-[1rem] lg:flex lg:justify-center text-[2.3rem] text-primary 
+    }
+
+    /* SERVICES */
+    .services__text{
+        @apply relative block text-center py-[4rem]
+    }
+    .services__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] 
+    }
+    .services__text h4{
+        @apply absolute text-primary font-medium text-[1.5rem] left-[10rem] top-[5.5rem]
+        lg:text-[3rem] lg:left-[38rem] lg:top-[7rem]
+    }
+    .services__holder{
+        @apply lg:grid lg:grid-cols-3 lg:gap-[2rem]
+    }
+    .services__list{
+        @apply relative mb-[2rem] 
+    }
+    .services__list i{
+        @apply text-primary text-[5rem] 
+    }
+    .services__list h3{
+        @apply py-[2rem] font-bold uppercase text-[1.5rem]
+    }
+    .services__list p{
+        @apply text-semigray text-[.8rem]
+    }
+    .web__design{
+        @apply bg-web-design-bg bg-cover h-[20rem] p-[2rem]
+    }
+    .web__dev{
+        @apply bg-web-dev-bg bg-cover h-[20rem] p-[2rem]
+    }
+    .graphic__design{
+        @apply bg-graphic-design-bg bg-cover h-[20rem] p-[2rem]
+    }
+    .svs__branding{
+        @apply bg-branding-bg bg-cover h-[20rem] p-[2rem]
+    }
+    .ui__ux__design{
+        @apply bg-uiux-design-bg bg-cover h-[20rem] p-[2rem]
+    }
+    .video__editing{
+        @apply bg-video-editing-bg bg-cover h-[20rem] p-[2rem] 
+    }
+    
+
+}
