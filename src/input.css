@@ -5,7 +5,9 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-.services__text h1{
+.services__text h1,
+.project__section__text h1,
+.project__text h1{
      font-family: 'Archivo Black', 'sans-serif';
 }
 .text-stroke{
@@ -130,7 +132,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply py-[2rem] font-bold uppercase text-[1.5rem]
     }
     .services__list p{
-        @apply text-semigray text-[.8rem]
+        @apply text-[#ececec] text-[.8rem]
     }
     .web__design{
         @apply bg-web-design-bg bg-cover h-[20rem] p-[2rem]
@@ -150,6 +152,223 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     .video__editing{
         @apply bg-video-editing-bg bg-cover h-[20rem] p-[2rem] 
     }
-    
+    .project{
+        @apply mb-[5rem]
+    }
+    .project__section__text{
+        @apply relative block text-center py-[4rem]
+    }
+    .project__section__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] 
+    }
+    .project__section__text h4{
+        @apply absolute text-primary font-medium text-[1.5rem] left-[10rem] top-[5.5rem]
+        lg:text-[3rem] lg:left-[52rem] lg:top-[7rem]
+    }
+    .project__list{
+        @apply relative mb-[10rem] lg:flex lg:justify-between lg:mb-[0rem] 
+    }
+    .project__list:first-child {
+        @apply lg:flex-row-reverse
+    }
+    /* .project__list:first-child img{
+        @apply ml-[-15rem]
+    } */
+    .project__list:nth-child(2) .project__text{
+        @apply z-50
+    }
+    .project__list:nth-child(2) .project__box{
+        @apply lg:ml-[2rem]
+    }
+    .project__list:last-child{
+        @apply mb-[2rem] lg:flex-row-reverse 
+    }
+    .project__list:last-child img{
+        @apply lg:mt-[7rem]
+    }
+    .project__img{
+        @apply mb-[5rem]
+    }
+    .project__img img{
+        @apply z-50 absolute top-[-2rem]  lg:top-[-5rem] lg:relative
+    }
+    .project__box{
+        @apply bg-[#353535] h-[18rem] lg:h-[30rem] lg:absolute lg:top-[10rem] w-full lg:w-[68rem] z-10 rounded-xl mt-[-2rem]
+    }
+    .project__text{
+        @apply block justify-center text-center mx-[2rem] lg:text-start lg:align-middle lg:mt-[10rem]
+    }
+    .project__text h1{
+        @apply uppercase
+    }
+    .project__category{
+        @apply relative 
+    }
+    .project__category h3{
+        @apply text-gray uppercase text-[1.2rem] pb-[.5rem] font-medium
+    }
+    .project__category span{
+        @apply absolute bottom-0 lg:left-0 ml-[-4rem] lg:ml-[0rem] mt-[1rem] h-[.2rem] w-[8rem] lg:w-[5rem] bg-primary 
+    }
+    .project__text{
+        @apply lg:w-[40rem]
+    }
+    .project__text h1{
+        @apply py-[1rem] text-[2.3rem]
+    }
+    .project__text p{
+        @apply uppercase font-medium leading-8 text-[.9rem] text-justify mb-[1rem]
+    }
+    .project__text a{
+        @apply text-primary text-[1.2rem] font-medium uppercase 
+    }
+    .project__more span{
+        @apply flex h-[8rem] w-[.1rem] mb-[1rem] lg:mb-[3rem] bg-light justify-center mx-auto
+    }
+    .project__more a{
+        @apply text-center flex justify-center text-primary font-medium text-[1.5rem]
+    }
+    /* BRANDS */
+    .brands{
+        @apply bg-[#ffffff] h-[35rem]
+    }
+    .brands__wrapper h4{
+        @apply flex justify-center text-center text-[#707070] py-[4rem]
+    }
+    .brands__list{
+        @apply mb-[2rem]
+    }
+    .brands__list ul{
+        @apply grid grid-cols-2 gap-[3rem] lg:gap-[5rem] lg:grid-cols-3
+    }
+    .brands__list ul li{
+        @apply flex justify-center 
+    }
+    .brands__list ul li img{
+        @apply object-contain
+    }
+    /* Experience */
+    .experience{
+        @apply py-[5rem] lg:py-[8rem] 
+    }
+    .experience__wrapper{
+        @apply lg:flex lg:justify-between
+    }
+    .my__experience h2{
+        @apply text-center text-[2.5rem] py-[2rem]
+    }
+    .my__experience p{
+        @apply text-gray mb-[2rem] lg:w-[30rem] text-justify
+    }
+    .my__skills{
+        @apply grid grid-cols-2 gap-[2rem]  mb-[2rem] lg:mb-0 lg:flex lg:align-middle lg:items-center
+    }
+    .skill h4{
+        @apply text-[1.1rem]
+    }
+    .skill h5{
+        @apply text-gray
+    }
+    .skill p{
+        @apply font-bold text-[.8rem] text-gray
+    }
 
+    /* CONTACT LINKS */
+    .contact{
+        @apply bg-contact-bg bg-cover bg-opacity-20 pt-[2rem] pb-[5rem]
+    }
+    .contact__holder{
+        @apply lg:flex lg:justify-between lg:mx-[5rem]
+    }
+    .contact__wrapper h1{
+        @apply font-bold text-[1.5rem] mb-[1rem] py-[1rem] text-center text-primary
+    }
+    .contact__links ul{
+        @apply flex gap-[1.2rem] justify-center lg:block
+    }
+    .contact__links ul li{
+        @apply mb-[1rem] 
+    }
+    .contact__links ul li i{
+        @apply text-primary text-[1.5rem] lg:text-[2rem]
+    }
+    .contact__info{
+        @apply relative pb-[2rem] lg:w-[18rem]
+    }
+    .contact__info h3{
+        @apply text-[1.3rem]
+    }
+    .contact__info span{
+        @apply flex h-[.1rem] w-[5rem]  bg-primary my-[.5rem] z-50
+    }
+    .contact__info h5{
+        @apply text-[1.1rem] lg:leading-8 py-[1rem] 
+    }
+    .contact__info p{
+        @apply font-bold text-[.8rem]
+    }
+    .contact__form{
+        @apply w-[40rem]
+    }
+    .contact__form input{
+        @apply w-full h-[3rem] mb-[1rem] pl-[2rem]
+    }
+    .contact__form textarea{
+        @apply resize-none w-full pl-[2rem] pt-[1rem]
+    }
+    #email{
+        @apply mx-auto 
+    }
+    .btn__primary{
+        @apply flex justify-start mt-[.5rem]
+    }
+    .btn__primary a {
+        @apply py-[1rem] px-[1rem] uppercase bg-primary hover:bg-[#2F2F2F] hover:text-primary text-dark font-medium
+    }
+    /* footer */
+    .footer{
+        @apply bg-[#222222] text-light flex text-center lg:text-start pt-[5rem]
+    }
+    .footer__name{
+        @apply hidden lg:block lg:w-full
+    }
+    .sitemap{
+        @apply lg:w-full
+    }
+    .footer__links{
+        @apply lg:w-full
+    }
+    .footer__wrapper{
+        @apply px-[2rem] w-full
+    }
+    .footer__wrapper ul li a{
+        @apply uppercase
+    }
+    .footer__wrapper span{
+        @apply hidden w-full h-[.1rem] lg:flex justify-center bg-light mx-auto mb-[1rem]
+    }
+    .mline span{
+        @apply lg:hidden w-full h-[.1rem] flex justify-center bg-light mx-auto mb-[1rem]
+    }
+    .footer__wrapper h5{
+        @apply text-primary uppercase text-[1.2rem]  font-medium py-[.5rem]
+    }
+    .footer__wrapper ul li{
+        @apply  hover:bg-[#2F2F2F] hover:text-primary 
+    }
+    .footer__wrapper ul li a {
+        @apply flex w-full hover:text-primary py-[1rem]
+    }
+    .footer__holder{
+        @apply lg:flex lg:justify-between mb-[1rem] lg:gap-[2rem]
+    }
+    
+    .copyright{
+        @apply bg-[#2F2F2F] text-center
+    }
+    .copyright p{
+        @apply px-0 py-[2rem] text-primary
+    }
+    
 }

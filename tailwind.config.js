@@ -24,6 +24,10 @@ module.exports = {
         'branding-bg': "url('./img/branding.jpg')",
         'uiux-design-bg': "url('./img/ui-ux-design.jpg')",
         'video-editing-bg': "url('./img/video-editing.jpg')",
+        'amazon-ebc-bg': "url('./img/Amazon EBC.jpg')",
+        'logo-design-bg': "url('./img/Logo Design.jpg')",
+        'passion-project-web-bg': "url('./img/Passion Project-Web.png')",
+        'contact-bg' : "url('./img/contact-bg.png')",
       }
     },
   },
