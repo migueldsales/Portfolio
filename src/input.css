@@ -22,26 +22,47 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     @apply text-light;
 }
 .container{
-    @apply px-[2rem] lg:px-[15rem] min-w-[99vw] max-w-[100vw]
+    @apply px-[2rem] lg:px-[10rem] max-w-[120rem]
 }
 @layer components {
     .header{
-        @apply bg-black h-[6rem] flex items-center
+        @apply bg-black h-[6rem] flex items-center justify-center
     }
     .header__wrapper{
-        @apply flex justify-between items-center
+        @apply flex justify-between items-center lg:block
+    }
+    .branding{
+        @apply lg:flex lg:justify-between
     }
     .branding img{
         @apply h-[3rem] 
     }
-    .header__nav{
-        @apply hidden lg:flex
+    .branding ul{
+        @apply gap-[2rem] hidden items-center lg:flex lg:justify-between overflow-hidden
     }
-    .header__nav ul{
-        @apply flex gap-[2rem]
+    .header__nav{
+        @apply lg:hidden absolute top-[-33rem] left-0 z-50 overflow-hidden w-[100%] mt-[6rem] duration-300 ease-in
+    }
+    .header__nav.open{
+        @apply top-0 duration-300 ease-in z-50 bg-dark left-0
+    }
+    .header__nav ul li{
+        @apply  border-b border-light hover:bg-[#2F2F2F] pl-[1rem]
+    }
+    .header__nav ul li:first-child a{
+        @apply text-primary
+    }
+    .header__nav ul li:hover a{
+        @apply text-primary
     }
     .header__nav ul li a{
-        @apply uppercase
+        @apply uppercase hover:text-primary flex py-[1rem]
+    }
+    .branding ul li:first-child a{
+        @apply text-primary border-b-2 pb-[.3rem]
+    }
+    .branding ul li a{
+        @apply uppercase hover:text-primary
     }
     .toggle__menu{
         @apply lg:hidden;
@@ -67,7 +88,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply relative py-[2rem] lg:py-[8rem] mb-[5rem]
     }
     .banner__wrapper{
-        @apply flex flex-wrap-reverse  justify-center  lg:justify-between
+        @apply flex flex-wrap-reverse justify-center gap-0 
     }
     .banner__text{
         @apply justify-center text-center lg:text-start
@@ -98,7 +119,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply flex gap-[2rem]
     }
     .banner__links ul li a i{
-        @apply text-primary text-[2.2rem]
+        @apply text-primary text-[2.2rem] hover:text-light
     }
     .chevron__down{
         @apply hidden lg:block
@@ -108,22 +129,32 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
 
     /* SERVICES */
+    .services{
+        @apply flex justify-center
+    }
     .services__text{
-        @apply relative block text-center py-[4rem]
+        @apply relative text-center py-[4rem] flex justify-center
     }
     .services__text h1{
         /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
             @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] 
     }
     .services__text h4{
-        @apply absolute text-primary font-medium text-[1.5rem] left-[10rem] top-[5.5rem]
-        lg:text-[3rem] lg:left-[38rem] lg:top-[7rem]
+        @apply absolute text-primary font-medium text-[1.5rem] top-[5.5rem]
+        lg:text-[3rem] lg:top-[7rem]
     }
     .services__holder{
         @apply lg:grid lg:grid-cols-3 lg:gap-[2rem]
     }
     .services__list{
-        @apply relative mb-[2rem] 
+        @apply relative mb-[2rem] opacity-75 hover:opacity-100
+    }
+
+    .services__list:hover h3{
+        @apply text-primary
+    }
+    .services__list:hover p{
+        @apply text-primary
     }
     .services__list i{
         @apply text-primary text-[5rem] 
@@ -153,24 +184,30 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply bg-video-editing-bg bg-cover h-[20rem] p-[2rem] 
     }
     .project{
-        @apply mb-[5rem]
+        @apply mb-[5rem] flex justify-center
+    }
+    .project__holder{
+        @apply overflow-hidden
+    }
+    .project__holder:first-child{
+        @apply mt-[5rem]
     }
     .project__section__text{
-        @apply relative block text-center py-[4rem]
+        @apply relative text-center py-[4rem] flex justify-center
     }
     .project__section__text h1{
         /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
             @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] 
     }
     .project__section__text h4{
-        @apply absolute text-primary font-medium text-[1.5rem] left-[10rem] top-[5.5rem]
-        lg:text-[3rem] lg:left-[52rem] lg:top-[7rem]
+        @apply absolute text-primary font-medium text-[1.5rem] top-[5.5rem]
+        lg:text-[3rem] lg:top-[7rem]
     }
     .project__list{
         @apply relative mb-[10rem] lg:flex lg:justify-between lg:mb-[0rem] 
     }
     .project__list:first-child {
-        @apply lg:flex-row-reverse
+        @apply lg:flex-row-reverse mt-[5rem] lg:mt-0
     }
     /* .project__list:first-child img{
         @apply ml-[-15rem]
@@ -191,10 +228,10 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply mb-[5rem]
     }
     .project__img img{
-        @apply z-50 absolute top-[-2rem]  lg:top-[-5rem] lg:relative
+        @apply z-50 absolute top-[-2rem]  lg:top-0 lg:relative
     }
     .project__box{
-        @apply bg-[#353535] h-[18rem] lg:h-[30rem] lg:absolute lg:top-[10rem] w-full lg:w-[68rem] z-10 rounded-xl mt-[-2rem]
+        @apply bg-[#353535] h-[18rem] lg:h-[30rem] lg:absolute lg:top-[10rem] w-full lg:w-[55%] z-10 rounded-xl mt-[-2rem]
     }
     .project__text{
         @apply block justify-center text-center mx-[2rem] lg:text-start lg:align-middle lg:mt-[10rem]
@@ -231,7 +268,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     /* BRANDS */
     .brands{
-        @apply bg-[#ffffff] h-[35rem]
+        @apply bg-[#ffffff] h-[35rem] flex justify-center
     }
     .brands__wrapper h4{
         @apply flex justify-center text-center text-[#707070] py-[4rem]
@@ -250,10 +287,10 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     /* Experience */
     .experience{
-        @apply py-[5rem] lg:py-[8rem] 
+        @apply py-[5rem] lg:py-[8rem] flex justify-center
     }
     .experience__wrapper{
-        @apply lg:flex lg:justify-between
+        @apply lg:flex lg:justify-between lg:items-center mx-[2rem] gap-[5rem]
     }
     .my__experience h2{
         @apply text-center text-[2.5rem] py-[2rem]
@@ -262,21 +299,24 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply text-gray mb-[2rem] lg:w-[30rem] text-justify
     }
     .my__skills{
-        @apply grid grid-cols-2 gap-[2rem]  mb-[2rem] lg:mb-0 lg:flex lg:align-middle lg:items-center
+        @apply grid grid-cols-2 gap-[2rem]  mb-[2rem] lg:mb-0 lg:flex lg:align-middle lg:items-baseline
+    }
+    .skills{
+        @apply block 
     }
     .skill h4{
         @apply text-[1.1rem]
     }
     .skill h5{
-        @apply text-gray
+        @apply text-gray py-[.3rem]
     }
     .skill p{
-        @apply font-bold text-[.8rem] text-gray
+        @apply font-bold text-[.8rem] text-gray max-w-[12rem]
     }
 
     /* CONTACT LINKS */
     .contact{
-        @apply bg-contact-bg bg-cover bg-opacity-20 pt-[2rem] pb-[5rem]
+        @apply bg-contact-bg bg-cover bg-opacity-20 pt-[2rem] pb-[5rem] flex justify-center
     }
     .contact__holder{
         @apply lg:flex lg:justify-between lg:mx-[5rem]
@@ -309,7 +349,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply font-bold text-[.8rem]
     }
     .contact__form{
-        @apply w-[40rem]
+        @apply lg:w-[40rem]
     }
     .contact__form input{
         @apply w-full h-[3rem] mb-[1rem] pl-[2rem]
