@@ -107,7 +107,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         lg:text-start 
     }
     .banner__info h4{
-        @apply mb-[2rem] w-[27rem] lg:w-[50rem]
+        @apply px-[1rem] text-[1.5rem] lg:text-[3.3rem] mb-[2rem] w-[25rem] lg:w-[50rem] lg:px-0
     }
     .banner__info span{
         @apply absolute bottom-0 lg:left-0 mt-[1rem] h-[.3rem] w-[8rem] lg:w-[5rem] bg-primary 
