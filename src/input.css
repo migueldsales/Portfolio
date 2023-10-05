@@ -14,12 +14,25 @@
     -webkit-text-stroke: 1px #ffffff;
     text-stroke: 1px #ffffff;
   }
+
   
 body{
     @apply bg-dark
 }
 p,h1,h2,h3,h4,h5,h6,span,a{
     @apply text-light;
+}
+.tns-controls{
+    @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[60%] lg:top-[60%] lg:left-[5%] lg:w-[90vw]
+}
+.amazon__content .tns-controls{
+    @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[65%] lg:top-[65%] lg:left-[5%] lg:w-[90vw]
+}
+.amazon__storefront .tns-controls{
+    @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[68%] lg:top-[50%] lg:left-[5%] lg:w-[90vw]
+}
+.logo .tns-controls{
+    @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[68%] lg:top-[60%]  lg:left-[5%] lg:w-[90vw]
 }
 .container{
     @apply px-[2rem] lg:px-[10rem] max-w-[120rem]
@@ -58,9 +71,10 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     .header__nav ul li a{
         @apply uppercase hover:text-primary flex py-[1rem]
     }
-    .branding ul li:first-child a{
+    /* .branding ul li:first-child a{
         @apply text-primary border-b-2 pb-[.3rem]
-    }
+    } */
+
     .branding ul li a{
         @apply uppercase hover:text-primary
     }
@@ -204,13 +218,13 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         lg:text-[3rem] lg:top-[7rem]
     }
     .project__list{
-        @apply relative mb-[10rem] lg:flex lg:justify-between lg:mb-[0rem] 
+        @apply relative mb-[10rem] lg:flex lg:justify-between lg:mb-[0rem] opacity-0 transition-all duration-[1.5s] lg:translate-x-[-100rem] blur-md
     }
     .project__list:first-child {
         @apply lg:flex-row-reverse mt-[5rem] lg:mt-0
     }
-    /* .project__list:first-child img{
-        @apply ml-[-15rem]
+    /* .project__list:nth-child(2){
+        @apply opacity-0
     } */
     .project__list:nth-child(2) .project__text{
         @apply z-50
@@ -219,7 +233,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
         @apply lg:ml-[2rem]
     }
     .project__list:last-child{
-        @apply mb-[2rem] lg:flex-row-reverse 
+        @apply mb-[2rem] lg:flex-row-reverse
     }
     .project__list:last-child img{
         @apply lg:mt-[7rem]
@@ -316,7 +330,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
 
     /* CONTACT LINKS */
     .contact{
-        @apply bg-contact-bg bg-cover bg-opacity-20 pt-[2rem] pb-[5rem] flex justify-center
+        @apply relative bg-contact-bg bg-cover bg-opacity-20 pt-[2rem] pb-[5rem] flex justify-center
     }
     .contact__holder{
         @apply lg:flex lg:justify-between lg:mx-[5rem]
@@ -368,7 +382,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     /* footer */
     .footer{
-        @apply bg-[#222222] text-light flex text-center lg:text-start pt-[5rem]
+        @apply relative bg-[#222222] text-light flex text-center lg:text-start pt-[5rem]
     }
     .footer__name{
         @apply hidden lg:block lg:w-full
@@ -410,5 +424,233 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     .copyright p{
         @apply px-0 py-[2rem] text-primary
     }
-    
+
+    /* PROJECT PAGE */
+
+    .project__page__section__text{
+        @apply bg-projects-bg bg-cover bg-no-repeat bg-opacity-0 backdrop-brightness-0
+    }
+    .project__page__section__text{
+        @apply relative text-center py-[6rem] flex justify-center
+    }
+    .project__page__section__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] font-ArchivoBlack
+    }
+    .project__page__section__text h4{
+        @apply absolute text-primary font-medium text-[1.5rem] top-[7.5rem] 
+        lg:text-[3rem] lg:top-[9rem]
+    }
+    .project__page__text{
+        @apply z-50 absolute bottom-[3rem]
+    }
+    .project__page__text h6{
+        @apply max-w-[18rem]
+    }
+
+    /* WEB DEVELOPMENT SECTION */
+    .web__development{
+        @apply py-[3rem] relative
+    }
+    .web__development__section__text{
+        @apply relative text-center flex justify-center
+    }
+    .web__development__section__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[2.5rem]  opacity-[.07] lg:text-[5.5rem] font-ArchivoBlack
+    }
+    .web__development__section__text h4{
+        @apply absolute text-primary font-medium text-[1.6rem] top-[.7rem] 
+        lg:text-[3rem] lg:top-[2rem]
+    }
+    .web__development__list__title{
+        @apply py-[2rem] flex justify-center
+    }
+    .web__development__list__title h4{
+        @apply text-center font-bold text-[1.4rem]
+    }
+    .web__development__list__text{
+        @apply flex justify-center
+    }
+    .web__development__list__text h6{
+        @apply text-center lg:max-w-[60rem] px-[1rem]
+    }
+    .web__development__list{
+        @apply flex justify-center
+    }
+    .web__development__item{
+        @apply relative px-[1rem]
+    }
+    .web__development__item__image{
+        @apply mt-[2rem] flex justify-center w-[23rem] lg:w-full mx-auto
+    }
+    .web__development__item__title{
+        @apply pt-[2rem] flex justify-center
+    }
+    .web__development__item__title h4{
+        @apply text-center font-medium text-[1.5rem]
+    }
+    .live__demo__button{
+        @apply flex justify-center mt-[1rem]
+    }
+    .live__demo__button a{
+        @apply text-center text-primary 
+    }
+    /* AMAZON A+ CONTENT SECTION */
+    .amazon__content{
+        @apply relative
+    }
+    .amazon__content__section__text{
+        @apply relative text-center flex justify-center
+    }
+    .amazon__content__section__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[2.3rem]  opacity-[.07] lg:text-[5.5rem] font-ArchivoBlack
+    }
+    .amazon__content__section__text h4{
+        @apply absolute text-primary font-medium text-[1.6rem] top-[.6rem]
+        lg:text-[3rem] lg:top-[2rem]
+    }
+    .amazon__content__list__title{
+        @apply py-[2rem] flex justify-center
+    }
+    .amazon__content__list__title h4{
+        @apply text-center font-bold text-[1.4rem]
+    }
+    .amazon__content__list__text{
+        @apply flex justify-center
+    }
+    .amazon__content__list__text h6{
+        @apply text-center lg:max-w-[60rem] px-[1rem]
+    }
+    .amazon__content__item{
+        @apply relative
+    }
+    .amazon__content__background{
+        @apply rounded-md bg-[#353535] mt-[2rem] mb-[4rem] w-[25rem] lg:w-[96rem] flex justify-center mx-auto
+    }
+    .amazon__content__item__image{
+        @apply mt-[2rem] z-50 flex justify-center max-w-[26rem] lg:max-w-full mx-auto 
+    }
+    .amazon__content__item__image img{
+        @apply object-cover object-center max-w-full
+    }
+    .amazon__content__item__title{
+        @apply pt-[2rem] flex justify-center
+    }
+    .amazon__content__item__title h4{
+        @apply text-center font-medium text-[1.5rem] w-[23rem] lg:w-[96rem]
+    }
+    .view__project__button{
+        @apply flex justify-center mt-[1rem]
+    }
+    .view__project__button a{
+        @apply text-center text-primary 
+    }
+
+    /* AMAZON STOREFRONT SECTION */
+    .amazon__storefront{
+        @apply relative
+    }
+    .amazon__storefront__section__text{
+        @apply relative text-center flex justify-center
+    }
+    .amazon__storefront__section__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[2.2rem]  opacity-[.07] lg:text-[5.3rem] font-ArchivoBlack
+    }
+    .amazon__storefront__section__text h4{
+        @apply absolute text-primary font-medium text-[1.5rem] top-[.5rem]
+        lg:text-[3rem] lg:top-[2rem]
+    }
+    .amazon__storefront__background{
+        @apply relative rounded-md bg-[#353535] pb-[1rem] mt-[2rem] mb-[4rem] w-[25rem] lg:w-[96rem] flex justify-center mx-auto
+    }
+    .amazon__storefront__list__title{
+        @apply py-[2rem] flex justify-center
+    }
+    .amazon__storefront__list__title h4{
+        @apply text-center font-bold text-[1.4rem] 
+    }
+    .amazon__storefront__list__text{
+        @apply flex justify-center
+    }
+    .amazon__storefront__list__text h6{
+        @apply text-center lg:max-w-[60rem] px-[1rem]
+    }
+    .amazon__storefront__item{
+        @apply relative
+    }
+    .amazon__storefront__item__image{
+        @apply mt-[2rem] flex justify-center max-w-[26rem] lg:max-w-full mx-auto 
+    }
+    .amazon__storefront__item__image img{
+        @apply object-cover object-center
+    }
+    .amazon__storefront__item__title{
+        @apply pt-[2rem] flex justify-items-center w-[23rem] lg:w-[96rem] mx-auto
+    }
+    .amazon__storefront__item__title h4{
+        @apply text-center font-medium text-[1.5rem] mx-auto
+    }
+    /* LOGO SECTION */
+    .logo{
+        @apply lg:pb-[5rem] relative
+    }
+    .logo__section__text{
+        @apply relative text-center flex justify-center 
+    }
+    .logo__section__text h1{
+        /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
+            @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] font-ArchivoBlack
+    }
+    .logo__section__text h4{
+        @apply absolute text-primary font-medium text-[1.5rem] top-[1.5rem]
+        lg:text-[3rem] lg:top-[3rem]
+    }
+    .logo__background{
+        @apply rounded-2xl bg-[#353535] mt-[2rem] mb-[4rem] w-[25rem] lg:w-[96rem] flex justify-center mx-auto
+    }
+    .logo__list__title{
+        @apply py-[2rem] flex justify-center
+    }
+    .logo__list__title h4{
+        @apply text-center font-bold text-[1.4rem]
+    }
+    .logo__list__text{
+        @apply flex justify-center
+    }
+    .logo__list__text h6{
+        @apply text-center lg:max-w-[60rem] px-[1rem]
+    }
+    .logo__item{
+        @apply relative
+    }
+    .logo__item__image{
+        @apply mt-[2rem] flex justify-center max-w-[26rem] lg:max-w-full mx-auto 
+    }
+    .logo__item__image img{
+        @apply z-50 object-center mx-auto
+    }
+    /* .logo__item__image img{
+        @apply z-50 w-[15rem] object-center mx-auto
+    } */
+    .logo__item__title{
+        @apply pt-[2rem] flex justify-items-center w-[23rem] lg:w-[96rem] mx-auto
+    }
+    .logo__item__title h4{
+        @apply text-center font-medium text-[1.5rem] mx-auto
+    }
+    /* .hidden{
+        @apply opacity-0 transition-all duration-[1.5s] translate-x-[-100rem] blur-md
+    } */
+    .show{
+        @apply opacity-100 lg:translate-x-0 blur-0 duration-[1.5s] transition-all
+    }
+}
+
+@media(prefers-reduced-motion){
+    .project__list{
+        transition: none;
+    }
 }

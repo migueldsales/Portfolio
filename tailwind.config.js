@@ -15,7 +15,7 @@ module.exports = {
         pink: '#f9cdcd'
       },
       fontFamily:{
-        'Archivo Black' :['Archivo Black', 'sans-serif'],
+        'ArchivoBlack' :['Archivo Black', 'sans-serif'],
         'Montserrat' :['Montserrat', 'sans-serif'],
       },
       backgroundImage:{
@@ -29,6 +29,7 @@ module.exports = {
         'logo-design-bg': "url('./img/Logo Design.jpg')",
         'passion-project-web-bg': "url('./img/Passion Project-Web.png')",
         'contact-bg' : "url('./img/contact-bg.png')",
+        'projects-bg' : "url('./img/PROJECTS Background.png')",
       }
     },
   },
