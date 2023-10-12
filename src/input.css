@@ -29,7 +29,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[65%] lg:top-[65%] lg:left-[5%] lg:w-[90vw]
 }
 .amazon__storefront .tns-controls{
-    @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[68%] lg:top-[50%] lg:left-[5%] lg:w-[90vw]
+    @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[68%] lg:top-[50%] lg:left-[0%] lg:w-[85vw]
 }
 .logo .tns-controls{
     @apply absolute flex items-center justify-between w-[93vw] z-50 text-primary text-[2rem] left-[.6rem] top-[68%] lg:top-[60%]  lg:left-[5%] lg:w-[90vw]

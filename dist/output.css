@@ -2460,8 +2460,8 @@ p,h1,h2,h3,h4,h5,h6,span,a {
 @media (min-width: 1024px) {
   .amazon__storefront .tns-controls {
     top: 50%;
-    left: 5%;
-    width: 90vw;
+    left: 0%;
+    width: 85vw;
   }
 }
 
