@@ -457,7 +457,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     .web__development__section__text h1{
         /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
-            @apply z-50 bg-clip-text text-transparent text-[2.5rem]  opacity-[.07] lg:text-[5.5rem] font-ArchivoBlack
+            @apply z-50 bg-clip-text text-transparent text-[2.2rem]  opacity-[.07] lg:text-[5.5rem] font-ArchivoBlack
     }
     .web__development__section__text h4{
         @apply absolute text-primary font-medium text-[1.6rem] top-[.7rem] 
@@ -505,7 +505,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     .amazon__content__section__text h1{
         /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
-            @apply z-50 bg-clip-text text-transparent text-[2.3rem]  opacity-[.07] lg:text-[5.5rem] font-ArchivoBlack
+            @apply z-50 bg-clip-text text-transparent text-[1.6rem]  opacity-[.05] lg:text-[5.5rem] lg:opacity-[.07] font-ArchivoBlack
     }
     .amazon__content__section__text h4{
         @apply absolute text-primary font-medium text-[1.6rem] top-[.6rem]
@@ -557,7 +557,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     .amazon__storefront__section__text h1{
         /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
-            @apply z-50 bg-clip-text text-transparent text-[2.2rem]  opacity-[.07] lg:text-[5.3rem] font-ArchivoBlack
+            @apply z-50 bg-clip-text text-transparent text-[1.8rem]  opacity-[.07] lg:text-[5.3rem] font-ArchivoBlack
     }
     .amazon__storefront__section__text h4{
         @apply absolute text-primary font-medium text-[1.5rem] top-[.5rem]
@@ -602,7 +602,7 @@ p,h1,h2,h3,h4,h5,h6,span,a{
     }
     .logo__section__text h1{
         /* @apply absolute z-50 bg-clip-text text-transparent text-[3.5rem] left-[3.5rem] top-[-1.5rem] opacity-[.07] lg:text-[7rem] */
-            @apply z-50 bg-clip-text text-transparent text-[3.5rem]  opacity-[.07] lg:text-[7rem] font-ArchivoBlack
+            @apply z-50 bg-clip-text text-transparent text-[2.5rem]  opacity-[.07] lg:text-[7rem] font-ArchivoBlack
     }
     .logo__section__text h4{
         @apply absolute text-primary font-medium text-[1.5rem] top-[1.5rem]

@@ -1791,7 +1791,7 @@ video {
   -webkit-background-clip: text;
           background-clip: text;
   font-family: Archivo Black, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: transparent;
   opacity: .07
 }
@@ -1917,14 +1917,15 @@ video {
   -webkit-background-clip: text;
           background-clip: text;
   font-family: Archivo Black, sans-serif;
-  font-size: 2.3rem;
+  font-size: 1.6rem;
   color: transparent;
-  opacity: .07
+  opacity: .05
 }
 
 @media (min-width: 1024px) {
   .amazon__content__section__text h1 {
     font-size: 5.5rem;
+    opacity: .07;
   }
 }
 
@@ -2071,7 +2072,7 @@ video {
   -webkit-background-clip: text;
           background-clip: text;
   font-family: Archivo Black, sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: transparent;
   opacity: .07
 }
@@ -2223,7 +2224,7 @@ video {
   -webkit-background-clip: text;
           background-clip: text;
   font-family: Archivo Black, sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: transparent;
   opacity: .07
 }
